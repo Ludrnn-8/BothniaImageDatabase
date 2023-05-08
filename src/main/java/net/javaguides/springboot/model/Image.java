@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 
 @Entity
@@ -28,7 +29,12 @@ public class Image {
     @Column(name = "category")
     private String category;
 
+<<<<<<< HEAD
     @Column(name = "picByte", length = 10000)
+=======
+    @Lob
+    @Column(name = "picByte", length = 2000)
+>>>>>>> branch 'master' of https://github.com/Ludrnn-8/BothniaImageDatabase.git
 	private byte[] picByte;
     
     private String price;
@@ -58,6 +64,7 @@ public class Image {
         return picByte;
     }
     public void setPicByte(byte[] picByte) {
+        System.out.println("Setting picByte...");
         this.picByte = picByte;
     }
 	public String getTags() {
