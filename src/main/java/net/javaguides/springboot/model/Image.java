@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 
 @Entity
@@ -28,6 +29,7 @@ public class Image {
     @Column(name = "categories")
     private String category;
 
+    @Lob
     @Column(name = "picByte", length = 2000)
 	private byte[] picByte;
     
@@ -57,6 +59,7 @@ public class Image {
         return picByte;
     }
     public void setPicByte(byte[] picByte) {
+        System.out.println("Setting picByte...");
         this.picByte = picByte;
     }
 	public String getTags() {
