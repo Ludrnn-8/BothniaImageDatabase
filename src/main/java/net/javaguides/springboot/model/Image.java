@@ -29,12 +29,9 @@ public class Image {
     @Column(name = "category")
     private String category;
 
-<<<<<<< HEAD
-    @Column(name = "picByte", length = 10000)
-=======
     @Lob
     @Column(name = "picByte", length = 2000)
->>>>>>> branch 'master' of https://github.com/Ludrnn-8/BothniaImageDatabase.git
+
 	private byte[] picByte;
     
     private String price;
