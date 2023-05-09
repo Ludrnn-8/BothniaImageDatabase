@@ -26,15 +26,17 @@ public class Image {
     @Column(name = "tags")
     private String tags;
     
-    @Column(name = "categories")
+    @Column(name = "category")
     private String category;
 
     @Lob
     @Column(name = "picByte", length = 2000)
+
 	private byte[] picByte;
     
-    //Timestamp should be added:
-    //private Date dateOfUpload;
+    private String price;
+    
+
 
 
     public Long getId() {
@@ -74,6 +76,14 @@ public class Image {
 	public void setCategory(String category) {
 		this.category = category;
 	}
+	public String getPrice() {
+		return price;
+	}
+	public void setPrice(String price) {
+		this.price = price;
+	}
+	
+	
     
 }
 
